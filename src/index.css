@@ -17,12 +17,15 @@ body, html {
   --bodyTxt: 16px;
   --details: 14px;
   --smallTxt: 12px;
-  --buttonSize: 42px;
+  --btnSize: 52px;
+  --inputSize: 42px;
   --interFont: 'Inter', sans-serif;
   --overpassFont: 'Overpass', sans-serif;
   --montFont: 'Montserrat', sans-serif;
-  --bgColor: #1D2027;
-  --secColor: #795E53;
+  --bgColor: #D5DBE2;
+  --secColor: #1A202E;
+  --secBgColor: #F1F5F9;
+  --secDarker: #D5DBE2;
   --primColor: #FFFFFF;
   --secTxtColor: #A5A6A9;
 }

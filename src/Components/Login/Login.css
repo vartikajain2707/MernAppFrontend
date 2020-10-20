@@ -1,0 +1,83 @@
+.loginContainer {
+     position: absolute;
+     width: 360px;
+     padding: 5px;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+}
+.loginForm {
+     width: 350px;
+}
+.heading {
+     color: var(--secColor);
+     font-family: var(--overpassFont);
+     font-size: var(--mainT);
+     margin-top: 15px;
+     margin-bottom: 0;
+}
+.sub {
+     margin-top: 0;
+     color: var(--secColor);
+     font-size: var(--bodyTxt);
+     font-family: var(--interFont);
+}
+.inputContainer {
+     position: relative;
+     height: 62px;
+     transition: all 0.3s;
+}
+.inputLabel {
+     display: block;
+     opacity: 1;
+     font-size: var(--bodyTxt);
+     transform: translate(20px ,-42px);
+     transform-origin: 0 0;
+     transition: all 0.3s;
+}
+.input {
+     box-shadow: none;
+     height: var(--inputSize);
+     padding: 5px 5px 5px 20px;
+     width: 325px;
+     border: none;
+     border-radius: 5px;
+     background-color: var(--secBgColor);
+     margin: 5px auto;
+     font-size: var(--bodyTxt);
+     font-family: var(--interFont);
+     transition: all 0.5s;
+}
+.input::placeholder {
+     color: transparent;
+}
+.input:focus {
+     outline: 0;
+     padding: 10px 5px 0px 20px;
+}
+.input:focus + .inputLabel,
+.input:not(:placeholder-shown) + .inputLabel {
+     font-size: var(--smallTxt);
+     transform: translate(20px, -54px);
+}
+.forgot {
+     margin: 3px;
+     text-align: right;
+     font-size: var(--details);
+     font-family: var(--interFont);
+}
+.btn {
+     height: var(--btnSize);
+     border: none;
+     border-radius: 5px;
+     width: 360px;
+     padding: 5px 10px;
+     margin: 5px auto 15px auto;
+     font-size: var(--bodyTxt);
+     color: var(--primColor);
+     letter-spacing: 3px;
+     font-weight: 600;
+     font-family: var(--interFont);
+     background-color: var(--secColor);
+     cursor: pointer;
+}
