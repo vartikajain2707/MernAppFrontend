@@ -1,0 +1,59 @@
+.ShopCard {
+     position: relative;
+     width: 360px;
+     height: 192px;
+     margin: 10px auto;
+     border-radius: 5px;
+     background-color: var(--secDarker);
+}
+.logo {
+     position: absolute;
+     height: 90px;
+     width: 90px;
+     top: 20px;
+     left: 20px;
+}
+.shopname {
+     position: absolute;
+     margin: 0;
+     top: 20px;
+     right: 20px;
+     width: 210px;
+     text-overflow: ellipsis;
+     overflow: hidden;
+     white-space: nowrap;
+     font-size: var(--midT);
+     font-family: var(--interFont);
+     font-weight: 500;
+}
+.shopType {
+     position: absolute;
+     margin: 0;
+     top: 70px;
+     right: 20px;
+     width: 210px;
+     text-overflow: ellipsis;
+     display: -webkit-box;
+     -webkit-line-clamp: 3;
+     -webkit-box-orient: vertical;  
+     overflow: hidden;
+     font-size: var(--bodyTxt);
+     font-family: var(--overpassFont);
+     font-weight: normal;
+}
+.order {
+     position: absolute;
+     height: 42px;
+     width: calc(100% - 40px);
+     left: 20px;
+     bottom: 20px;
+     border: none;
+     background: #0077ED;
+     border-radius: 3px;
+     color: white;
+     letter-spacing: 2px;
+     font-family: var(--overpassFont);
+     font-style: normal;
+     font-weight: 500;
+     font-size: var(--bodyTxt);
+}
