@@ -1,12 +1,13 @@
 import React from 'react';
 import './Search.css';
 
+import SearchBar from './SearchBar';
 import Navbar from '../Navbar/Navbar';
 
 const Search = () => {
      return (
           <div>
-               Search Works!
+               <SearchBar />
                <Navbar />
           </div>
      );

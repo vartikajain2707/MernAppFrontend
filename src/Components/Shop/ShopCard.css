@@ -1,56 +1,59 @@
 .ShopCard {
      position: relative;
      width: 360px;
-     height: 192px;
+     height: 175px;
      margin: 10px auto;
      border-radius: 5px;
-     background-color: var(--secDarker);
+     background-color: var(--card);
 }
 .logo {
      position: absolute;
-     height: 90px;
-     width: 90px;
-     top: 20px;
-     left: 20px;
+     height: 105px;
+     width: 105px;
+     top: 35px;
+     left: 15px;
 }
 .shopname {
      position: absolute;
      margin: 0;
-     top: 20px;
-     right: 20px;
-     width: 210px;
+     top: 15px;
+     right: 15px;
+     width: 200px;
      text-overflow: ellipsis;
      overflow: hidden;
      white-space: nowrap;
      font-size: var(--midT);
      font-family: var(--interFont);
      font-weight: 500;
+     color: var(--txtColor);
 }
 .shopType {
      position: absolute;
      margin: 0;
-     top: 70px;
-     right: 20px;
-     width: 210px;
+     top: 65px;
+     right: 15px;
+     width: 200px;
      text-overflow: ellipsis;
      display: -webkit-box;
-     -webkit-line-clamp: 3;
+     -webkit-line-clamp: 2;
      -webkit-box-orient: vertical;  
      overflow: hidden;
      font-size: var(--bodyTxt);
      font-family: var(--overpassFont);
      font-weight: normal;
+     color: var(--txtColor);
 }
 .order {
      position: absolute;
-     height: 42px;
-     width: calc(100% - 40px);
-     left: 20px;
-     bottom: 20px;
+     height: 36px;
+     line-height: 36px;
+     width: 200px;
+     right: 15px;
+     bottom: 15px;
      border: none;
-     background: #0077ED;
+     background: #1BA94C;
      border-radius: 3px;
-     color: white;
+     color: var(--txtColor);
      letter-spacing: 2px;
      font-family: var(--overpassFont);
      font-style: normal;

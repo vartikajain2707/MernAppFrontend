@@ -7,24 +7,29 @@ body, html {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--secBgColor);
+  background-color: var(--bgColor);
 }
 
 :root {
   --mainT: 38px;
   --title: 28px;
-  --midT: 24px;
+  --midT: 25px;
   --subT: 18px;
-  --bodyTxt: 16px;
+  --bodyTxt: 17px;
   --details: 14px;
   --smallTxt: 12px;
-  --btnSize: 52px;
+  --btnSize: 36px;
   --inputSize: 42px;
   --interFont: 'Inter', sans-serif;
   --overpassFont: 'Overpass', sans-serif;
   --montFont: 'Montserrat', sans-serif;
-  --bgColor: #D5DBE2;
+  --bgColor: #343B47;
+  --bg: #464f5f;
   --secColor: #1A202E;
+  --card: #0D141E;
+  --icnColor: #FFFFFF;
+  --btnColor: #1BA94C;
+  --txtColor: #FFFFFF;
   --secBgColor: #F1F5F9;
   --secDarker: #D5DBE2;
   --primColor: #FFFFFF;
