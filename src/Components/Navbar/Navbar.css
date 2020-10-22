@@ -41,3 +41,19 @@
      margin: auto;
      fill: var(--icnColor);
 }
+.cartWithQuant {
+     position: absolute;
+     top: 5px;
+     right: 5px;
+     width: 1.75em;
+     height: 1.75em;
+     border-radius: 50%;
+     display: flex;
+     flex-direction: column;
+     text-align: center;
+     justify-content: center;
+     background-color: var(--btnColor);
+     color: var(--txtColor);
+     font-family: var(--overpassFont);
+     font-weight: 600;
+}
