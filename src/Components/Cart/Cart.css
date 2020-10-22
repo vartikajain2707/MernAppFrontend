@@ -1,0 +1,32 @@
+.Cart {
+     padding-top: 80px;
+}
+.emptyCart {
+     text-align: center;
+     color: var(--txtColor);
+     opacity: 0.5;
+     width: 85%;
+     margin: auto;
+     margin-top: 60px;
+     font-family: var(--interFont);
+     letter-spacing: 1px;
+     font-weight: 400;
+}
+.pay {
+     position: fixed;
+     bottom: 90px;
+     left: 50%;
+     transform: translateX(-50%);
+     height: 42px;
+     line-height: 42px;
+     width: 90%;
+     border: none;
+     border-radius: 5px;
+     font-size: 17px;
+     font-weight: 600;
+     letter-spacing: 3px;
+     font-family: var(--overpassFont);
+     color: var(--txtColor);
+     background-color: var(--btnColor);
+
+}

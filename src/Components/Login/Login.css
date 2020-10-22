@@ -10,17 +10,20 @@
      width: 350px;
 }
 .heading {
-     color: var(--secColor);
+     color: var(--txtColor);
      font-family: var(--overpassFont);
+     font-weight: 600;
+     letter-spacing: 2px;
      font-size: var(--mainT);
      margin-top: 15px;
      margin-bottom: 0;
 }
 .sub {
      margin-top: 0;
-     color: var(--secColor);
+     color: var(--txtColor);
      font-size: var(--bodyTxt);
      font-family: var(--interFont);
+     letter-spacing: 1px;
 }
 .inputContainer {
      position: relative;
@@ -38,7 +41,7 @@
 .input {
      box-shadow: none;
      height: var(--inputSize);
-     padding: 5px 5px 5px 20px;
+     padding: 10px 5px 0px 20px;
      width: 330px;
      border: none;
      border-radius: 5px;
@@ -53,7 +56,6 @@
 }
 .input:focus {
      outline: 0;
-     padding: 10px 5px 0px 20px;
 }
 .input:focus + .inputLabel,
 .input:not(:placeholder-shown) + .inputLabel {
@@ -65,9 +67,11 @@
      text-align: right;
      font-size: var(--details);
      font-family: var(--interFont);
+     color: var(--txtColor);
+     letter-spacing: 1px;
 }
 .btn {
-     height: var(--btnSize);
+     height: 52px;
      border: none;
      border-radius: 5px;
      width: 360px;
@@ -78,6 +82,6 @@
      letter-spacing: 3px;
      font-weight: 600;
      font-family: var(--interFont);
-     background-color: var(--secColor);
+     background-color: var(--btnColor);
      cursor: pointer;
 }
