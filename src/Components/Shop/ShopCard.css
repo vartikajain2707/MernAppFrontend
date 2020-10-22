@@ -30,7 +30,7 @@
 .shopType {
      position: absolute;
      margin: 0;
-     top: 65px;
+     top: 55px;
      right: 15px;
      width: 200px;
      text-overflow: ellipsis;
@@ -45,8 +45,8 @@
 }
 .order {
      position: absolute;
-     height: 36px;
-     line-height: 36px;
+     height: var(--btnSize);
+     line-height: var(--btnSize);
      width: 200px;
      right: 15px;
      bottom: 15px;

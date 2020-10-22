@@ -18,6 +18,10 @@
 .Bar:focus {
      outline: 0;
 }
+.Bar::placeholder {
+     color: rgb(202, 202, 202);
+     letter-spacing: 1px;
+}
 .Button {
      flex: 1;
      border: none;

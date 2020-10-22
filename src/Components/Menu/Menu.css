@@ -1,0 +1,25 @@
+.Menu {
+     position: relative;
+     width: 100%;
+     padding-top: 90px;
+}
+.shopLogo {
+     position: absolute;
+     top: 20px;
+     left: 10px;
+     width: 60px;
+}
+.menuShopName {
+     position: absolute;
+     width: 280px;
+     font-size: var(--mainT);
+     left: 80px;
+     top: 0px;
+     font-weight: 500;
+     font-family: var(--interFont);
+     font-style: normal;
+     color: var(--txtColor);
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+}

@@ -1,0 +1,121 @@
+.ItemCard {
+     position: relative;
+     width: 360px;
+     height: 190px;
+     margin: 10px auto;
+     border-radius: 5px;
+     background-color: var(--card);
+}
+.itemImage {
+     position: absolute;
+     top: 10px;
+     left: 10px;
+     height: 100px;
+     width: 100px;
+     border-radius: 5px;
+}
+.itemName {
+     position: absolute;
+     margin: 0;
+     top: 10px;
+     right: 10px;
+     width: 220px;
+     text-overflow: ellipsis;
+     overflow: hidden;
+     white-space: nowrap;
+     font-size: var(--midT);
+     font-family: var(--interFont);
+     font-weight: 500;
+     color: var(--txtColor);
+}
+.description {
+     position: absolute;
+     margin: 0;
+     top: 55px;
+     right: 10px;
+     width: 220px;
+     text-overflow: ellipsis;
+     display: -webkit-box;
+     -webkit-line-clamp: 4;
+     -webkit-box-orient: vertical;  
+     overflow: hidden;
+     font-size: var(--bodyTxt);
+     font-family: var(--overpassFont);
+     font-weight: normal;
+     color: var(--txtColor);
+}
+.itemPrice {
+     position: absolute;
+     margin: 0;
+     bottom: 10px;
+     right: 10px;
+     width: 220px;
+     font-size: var(--bodyTxt);
+     font-family: var(--overpassFont);
+     font-weight: normal;
+     color: var(--txtColor);
+}
+.add {
+     position: absolute;
+     height: 42px;
+     line-height: 42px;
+     width: 100px;
+     left: 10px;
+     bottom: 10px;
+     border: none;
+     background: #1BA94C;
+     border-radius: 5px;
+     color: var(--txtColor);
+     letter-spacing: 2px;
+     font-family: var(--overpassFont);
+     font-style: normal;
+     font-weight: 500;
+     font-size: var(--bodyTxt);
+}
+.minus {
+     position: absolute;
+     height: 42px;
+     line-height: 42px;
+     width: 35px;
+     left: 10px;
+     bottom: 10px;
+     border: none;
+     background: #1BA94C;
+     border-top-left-radius: 5px;
+     border-bottom-left-radius: 5px;
+     color: var(--txtColor);
+     font-family: var(--overpassFont);
+     font-weight: 600;
+     font-size: var(--bodyTxt);
+}
+.quant {
+     position: absolute;
+     height: 42px;
+     line-height: 42px;
+     width: 30px;
+     left: 45px;
+     bottom: 10px;
+     border: none;
+     border-radius: 0;
+     padding: 0;
+     text-align: center;
+     font-family: var(--overpassFont);
+     font-weight: 600;
+     font-size: var(--bodyTxt);
+}
+.plus {
+     position: absolute;
+     height: 42px;
+     line-height: 42px;
+     width: 35px;
+     left: 75px;
+     bottom: 10px;
+     border: none;
+     background: #1BA94C;
+     border-top-right-radius: 5px;
+     border-bottom-right-radius: 5px;
+     color: var(--txtColor);
+     font-family: var(--overpassFont);
+     font-weight: 600;
+     font-size: var(--bodyTxt);
+}
