@@ -6,20 +6,6 @@
      border-radius: 5px;
      background-color: var(--card);
 }
-.CartHeading {
-     position: fixed;
-     top: 25px;
-     left: 50%;
-     text-align: center;
-     transform: translateX(-50%);
-     width: 90%;
-     color: var(--txtColor);
-     font-family: var(--overpassFont);
-     font-weight: 500;
-     letter-spacing: 2px;
-     font-size: var(--mainT);
-     margin: 0;
-}
 .CartItemImage {
      position: absolute;
      top: 10px;

@@ -1,6 +1,24 @@
 .Cart {
      padding-top: 80px;
 }
+.CartHeading {
+     position: fixed;
+     top: 0px;
+     z-index: 1;
+     line-height: 70px;
+     background-color: var(--bgColor);
+     left: 50%;
+     text-align: center;
+     transform: translateX(-50%);
+     width: 100%;
+     color: var( --txtColor);
+     font-family: var( --overpassFont);
+     font-weight: 500;
+     letter-spacing: 2px;
+     font-size: var( --mainT);
+     margin: 0;
+     border-bottom: 2px solid rgb(240, 240, 240);
+}
 .emptyCart {
      text-align: center;
      color: var(--txtColor);
