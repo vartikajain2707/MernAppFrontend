@@ -23,22 +23,21 @@ export default function CheckoutForm() {
   const elements = useElements();
 
   useEffect(() => {
-     // Create PaymentIntent as soon as the page loads
-     window
-       .fetch("/create-payment-intent", {
-         method: "POST",
-         headers: {
-           "Content-Type": "application/json"
-         },
-         body: JSON.stringify({items: items})
-       })
-       .then(res => {
-            console.log(JSON.stringify(items));
-         return res.json();
-       })
-       .then(data => {
-         setClientSecret(data.clientSecret);
-       });
+      window
+        .fetch("/create-payment-intent", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({items: items})
+        })
+        .then(res => {
+             console.log(JSON.stringify(items));
+          return res.json();
+        })
+        .then(data => {
+          setClientSecret(data.clientSecret);
+        });
    }, []);
 
   const cardStyle = {
@@ -47,7 +46,7 @@ export default function CheckoutForm() {
         color: "Black",
         fontFamily: "Arial, sans-serif",
         fontSmoothing: "antialiased",
-        fontSize: "16px",
+        fontSize: "17px",
         "::placeholder": {
           color: "Black",
         },

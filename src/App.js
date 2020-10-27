@@ -9,6 +9,7 @@ import Login from './Components/Login/Login';
 import Menu from './Components/Menu/Menu';
 import Profile from './Components/Profile/Profile';
 import Search from './Components/Search/Search';
+import Stripe from './Components/Cart/Stripe';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path='/shop/:id' exact component={ Menu } />
         <Route path='/profile/:id' exact component={ Profile } />
         <Route path='/search' exact component={ Search } />
+        <Route path='/payment' exact component={ Stripe } />
     </Router>
   );
 }
