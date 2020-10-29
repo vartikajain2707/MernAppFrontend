@@ -1,0 +1,18 @@
+.home__logoutButton{
+    
+     height: var(--btnSize);
+     line-height: var(--btnSize);
+     width: 200px;
+     float: right;
+     margin: 10px;
+     border: none;
+     background: #1BA94C;
+     border-radius: 3px;
+     color: var(--txtColor);
+     letter-spacing: 2px;
+     font-family: var(--overpassFont);
+     font-style: normal;
+     font-weight: 500;
+     font-size: var(--bodyTxt);
+     outline: none;
+}

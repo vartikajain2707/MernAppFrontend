@@ -8,7 +8,7 @@ const SearchBar = () => {
      const [shops, setShops] = useState([]);
      const querySearch = (e) => {
           setTerm(e.target.value);
-          axios.post("http://localhost:5000/search", { query: e.target.value })
+          axios.post("http://localhost:3000/search", { query: e.target.value })
                .then(res => {
                     setShops(res.data);
                })

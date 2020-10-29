@@ -1,0 +1,28 @@
+.authOptions__login{
+    display: grid;
+    /* height: 100vh; */
+    place-items: center;
+
+}
+.authOptions__loginButton{
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 99px;
+    margin-top: 60vh;
+    font-weight: 600;
+    font-size: 30px;
+    background-color: #1db954;
+    border: none;
+    margin-bottom: 2px;
+    outline: none;
+    cursor: pointer;
+}
+.authOptions__link{
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 16px;
+}

@@ -14,14 +14,14 @@ const Menu = () => {
      const [shopPhotoURL, setShopPhotoURL] = useState('');
 
      useEffect(() => {
-          axios.get("http://localhost:5000/" + id + "/items")
+          axios.get("http://localhost:3000/" + id + "/items")
                .then(res => {
                     setItem(res.data.shopItems);
                })
                .catch(err => {
                     console.log(err);
                });
-          axios.post("http://localhost:5000/getShopName", { id } )
+          axios.post("http://localhost:3000/getShopName", { id } )
                .then(res => {
                     setShopName(res.data.name);
                     setShopPhotoURL(res.data.photoURL);

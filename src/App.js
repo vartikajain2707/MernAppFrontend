@@ -9,7 +9,7 @@ import Home from './Components/Home/Home';
 import Menu from './Components/Menu/Menu';
 import Profile from './Components/Profile/Profile';
 import Search from './Components/Search/Search';
-import Stripe from './Components/Cart/Stripe';
+
 
 
 import Login from './Components/auth/Login';
@@ -56,6 +56,7 @@ function App() {
   },[]);
 
   return (
+
     
     <BrowserRouter>
         <UserContext.Provider value={{userData,setUserData}}>
@@ -73,6 +74,7 @@ function App() {
        
         </UserContext.Provider>
     </BrowserRouter>
+
   );
 }
 
