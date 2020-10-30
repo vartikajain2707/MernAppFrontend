@@ -1,0 +1,93 @@
+.SignInContainer {
+     position: absolute;
+     width: 360px;
+     padding: 5px 10px;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+}
+.heading {
+     font-size: var(--mainT);
+     font-family: var(--interFont);
+     font-weight: 400;
+     color: var(--primColor);
+}
+.inputContainer {
+     position: relative;
+     height: 62px;
+     transition: all 0.3s;
+}
+.inputLabel {
+     display: block;
+     opacity: 1;
+     width: 150px;
+     margin: 0;
+     font-size: 17px;
+     transform: translate(15px, -42px);
+     transform-origin: 0 0;
+     transition: all 0.3s;
+}
+.input {
+     z-index: 1;
+     box-shadow: none;
+     height: 36px;
+     padding: 10px 15px 0px 15px;
+     width: 330px;
+     border: none;
+     border-radius: 5px;
+     margin: 5px auto;
+     font-size: 17px;
+     transition: all 0.5s;
+}
+.input::placeholder {
+     color: transparent;
+}
+.input:focus {
+     outline: 0;
+}
+.input:focus + .inputLabel,
+.input:not(:placeholder-shown) + .inputLabel {
+     font-size: 11px;
+     transform: translate(15px, -50px);
+}
+.forgot {
+     margin: 3px;
+     text-align: right;
+     font-size: var(--details);
+     font-family: var(--interFont);
+     color: var(--txtColor);
+     letter-spacing: 1px;
+}
+.btn {
+     height: 52px;
+     border: none;
+     border-radius: 5px;
+     width: 360px;
+     padding: 5px 10px;
+     margin: 5px auto 15px auto;
+     font-size: var(--bodyTxt);
+     color: var(--primColor);
+     letter-spacing: 3px;
+     font-weight: 600;
+     font-family: var(--interFont);
+     background-color: var(--btnColor);
+     cursor: pointer;
+}
+.w-100 {
+     color: var(--primColor);
+}
+.text-center {
+     width: 360px;
+     text-align: center;
+}
+.Link {
+     color: var(--primColor);
+}
+.gmail {
+     height: 36px;
+     width: 36px;
+}
+.socialSignUp {
+     position: absolute;
+     bottom: 10px;
+}

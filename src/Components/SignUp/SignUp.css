@@ -1,30 +1,12 @@
-.loginContainer {
+.SignUpContainer {
      position: absolute;
      width: 360px;
-     padding: 5px;
+     padding: 5px 10px;
      top: 50%;
      left: 50%;
      transform: translate(-50%, -50%);
 }
-.loginForm {
-     width: 360px;
-}
-.heading {
-     color: var(--txtColor);
-     font-family: var(--overpassFont);
-     font-weight: 600;
-     letter-spacing: 2px;
-     font-size: var(--mainT);
-     margin-top: 15px;
-     margin-bottom: 0;
-}
-.sub {
-     margin-top: 0;
-     color: var(--txtColor);
-     font-size: var(--bodyTxt);
-     font-family: var(--interFont);
-     letter-spacing: 1px;
-}
+
 .inputContainer {
      position: relative;
      height: 62px;
@@ -35,22 +17,21 @@
      opacity: 1;
      width: 150px;
      margin: 0;
-     font-size: var(--bodyTxt);
-     transform: translate(20px ,-42px);
+     font-size: 17px;
+     transform: translate(15px, -42px);
      transform-origin: 0 0;
      transition: all 0.3s;
 }
 .input {
+     z-index: 1;
      box-shadow: none;
-     height: var(--inputSize);
-     padding: 10px 10px 0px 20px;
+     height: 36px;
+     padding: 10px 15px 0px 15px;
      width: 330px;
      border: none;
      border-radius: 5px;
-     background-color: var(--secBgColor);
      margin: 5px auto;
-     font-size: var(--bodyTxt);
-     font-family: var(--interFont);
+     font-size: 17px;
      transition: all 0.5s;
 }
 .input::placeholder {
@@ -61,8 +42,8 @@
 }
 .input:focus + .inputLabel,
 .input:not(:placeholder-shown) + .inputLabel {
-     font-size: var(--smallTxt);
-     transform: translate(20px, -54px);
+     font-size: 11px;
+     transform: translate(15px, -50px);
 }
 .forgot {
      margin: 3px;
