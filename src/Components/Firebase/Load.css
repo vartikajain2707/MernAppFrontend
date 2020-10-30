@@ -1,0 +1,10 @@
+.spin {
+     position: absolute;
+     top: 40%;
+     left: 50%;
+     transform: translate(-50%,50%);
+}
+svg {
+     height: 100px;
+     width: 100px;
+}
