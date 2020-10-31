@@ -1,7 +1,7 @@
 .SignInContainer {
      position: absolute;
      width: 360px;
-     padding: 5px 10px;
+     padding: 10px 5px;
      top: 50%;
      left: 50%;
      transform: translate(-50%, -50%);
@@ -30,13 +30,13 @@
 .input {
      z-index: 1;
      box-shadow: none;
-     height: 36px;
-     padding: 10px 15px 0px 15px;
+     height: 37px;
+     padding: 15px 20px 0px 10px;
      width: 330px;
      border: none;
      border-radius: 5px;
      margin: 5px auto;
-     font-size: 17px;
+     font-size: 12px;
      transition: all 0.5s;
 }
 .input::placeholder {
@@ -47,8 +47,8 @@
 }
 .input:focus + .inputLabel,
 .input:not(:placeholder-shown) + .inputLabel {
-     font-size: 11px;
-     transform: translate(15px, -50px);
+     font-size: 12px;
+     transform: translate(10px, -47px);
 }
 .forgot {
      margin: 3px;
@@ -88,6 +88,8 @@
      width: 36px;
 }
 .socialSignUp {
-     position: absolute;
-     bottom: 10px;
+     position: fixed;
+     bottom: 30px;
+     left: 50%;
+     transform: translate(-50%, 15px);
 }
