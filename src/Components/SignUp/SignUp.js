@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./SignUp.css";
 import { useAuth } from "../../Context/AuthContext";
 import { Link, useHistory } from "react-router-dom";
 
@@ -29,10 +28,12 @@ const SignUp = () => {
   };
 
   return (
-    <div className="SignUpContainer">
-      <form onSubmit={handleSubmit}>
-        <h1 className="heading">Create your account!</h1>
-        {error}
+    <div className="formContainer">
+      <h1 className="heading">Create a new account!</h1>
+
+      {error && <div className="alert">{error}</div>}
+
+      <form className="form" onSubmit={handleSubmit}>
         <div className="inputContainer">
           <input
             type="email"
@@ -75,13 +76,17 @@ const SignUp = () => {
             Confirm Password
           </label>
         </div>
-        <button disabled={loading} type="submit" className="btn">
+
+        <button disabled={loading} type="submit" className="signup btn">
           Sign Up
         </button>
-        <div className="w-100 text-center mt-2">
-          Already have an account? <Link className="Link" to="/signin">Sign In</Link>
-        </div>
       </form>
+
+      <div className="footer">
+        <p className="foot">
+          Already have an account? <Link className="Link" to="/signin">Sign In</Link>
+        </p>
+      </div>
     </div>
   );
 };

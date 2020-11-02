@@ -1,54 +1,76 @@
-.SignInContainer {
+.formContainer {
      position: absolute;
-     width: 360px;
-     padding: 10px 5px;
+     max-width: 320px;
+     width: 88%;
+     padding: 20px;
      top: 50%;
      left: 50%;
      transform: translate(-50%, -50%);
+     display: flex;
+     flex-direction: column;
+     transition: all .25s;
 }
 .heading {
-     font-size: var(--mainT);
      font-family: var(--interFont);
+     margin: 0 0 10px 0;
+     font-size: 30px;
      font-weight: 400;
      color: var(--primColor);
+     transition: all .25s;
+}
+.alert {
+     position: relative;
+     padding: .75rem 1rem;
+     border-radius: .25rem;
+     color: #721c24;
+     background-color: #f8d7da;
+     transition: all .25s;
+}
+.form {
+     width: 100%;
+     padding: 5px 0;
+     margin: 5px auto;
+     transition: all .25s;
 }
 .inputContainer {
-     position: relative;
-     height: 62px;
-     transition: all 0.3s;
+     width: 100%;
+     height: 60px;
+     transition: all .25s;
 }
 .inputLabel {
      display: block;
      opacity: 1;
      width: 150px;
      margin: 0;
+     color: rgb(110, 110, 110);
      font-size: 17px;
-     transform: translate(15px, -42px);
+     transform: translate(15px, -40px);
      transform-origin: 0 0;
-     transition: all 0.3s;
+     transition: all .25s;
 }
 .input {
-     z-index: 1;
      box-shadow: none;
-     height: 37px;
-     padding: 15px 20px 0px 10px;
-     width: 330px;
+     height: 22px;
+     padding: 22px 15px 2px 15px;
+     font-size: 14px;
+     width: calc(100% - 30px);
      border: none;
-     border-radius: 5px;
+     border-radius: 0.25rem;
      margin: 5px auto;
-     font-size: 12px;
-     transition: all 0.5s;
+     transition: all .25s;
 }
 .input::placeholder {
      color: transparent;
 }
 .input:focus {
      outline: 0;
+     padding: 22px 15px 2px 15px;
 }
 .input:focus + .inputLabel,
 .input:not(:placeholder-shown) + .inputLabel {
-     font-size: 12px;
-     transform: translate(10px, -47px);
+     font-size: 14px;
+     color: rgb(110, 110, 110);
+     transform: translate(15px, -48px);
 }
 .forgot {
      margin: 3px;
@@ -57,39 +79,62 @@
      font-family: var(--interFont);
      color: var(--txtColor);
      letter-spacing: 1px;
+     transition: all .25s;
 }
 .btn {
-     height: 52px;
+     height: 46px;
+     width: 100%;
+     margin: 5px auto;
+     padding: 0;
      border: none;
-     border-radius: 5px;
-     width: 360px;
-     padding: 5px 10px;
-     margin: 5px auto 15px auto;
-     font-size: var(--bodyTxt);
+     border-radius: 0.25rem;
      color: var(--primColor);
-     letter-spacing: 3px;
-     font-weight: 600;
+     font-size: 16px;
+     font-weight: 500;
+     letter-spacing: 2px;
      font-family: var(--interFont);
      background-color: var(--btnColor);
      cursor: pointer;
+     transition: all .25s;
 }
-.w-100 {
-     color: var(--primColor);
+.btn:focus {
+     outline: 0;
 }
-.text-center {
-     width: 360px;
+.foot {
+     margin: 0 auto;
      text-align: center;
+     font-size: 16px;
+     color: var(--primColor);
+     transition: all .25s;
 }
 .Link {
      color: var(--primColor);
 }
-.gmail {
+.googleLogin {
+     position: fixed;
+     bottom: 10px;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     height: 44px;
+     max-width: 320px;
+     width: 88%;
+     display: flex;
+     justify-content: center;
+     border-radius: 0.25rem;
+     background-color: black;
+}
+.gmailSVG {
      height: 36px;
      width: 36px;
+     margin: 4px 10px;
 }
-.socialSignUp {
-     position: fixed;
-     bottom: 30px;
-     left: 50%;
-     transform: translate(-50%, 15px);
+.gmail {
+     line-height: 44px;
+     margin: 0;
+     font-size: 17px;
+     font-weight: 400;
+     color: white;
+}
+.sub {
+     margin: 0 0 10px 0;
 }

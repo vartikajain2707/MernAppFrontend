@@ -1,0 +1,39 @@
+.ProfileCard {
+     position: relative;
+     width: 88%;
+     max-width: 380px;
+     height: 152px;
+     margin: 10px auto;
+     padding: 20px 10px;
+     border-radius: 0.25rem;
+     background-color: var(--secColor);
+}
+.userPhoto {
+     border-radius: 0.25rem;
+}
+.userName {
+     position: absolute;
+     margin: 0;
+     top: 10px;
+     left: 126px;
+     width: 210px;
+     text-overflow: ellipsis;
+     overflow: hidden;
+     white-space: nowrap;
+     font-size: var(--title);
+     font-weight: 400;
+     color: var(--primColor);
+}
+.userEmail {
+     position: absolute;
+     margin: 0;
+     top: 50px;
+     left: 126px;
+     width: 210px;
+     text-overflow: ellipsis;
+     overflow: hidden;
+     white-space: nowrap;
+     font-size: var(--subT);
+     font-weight: 400;
+     color: var(--primColor);
+}
