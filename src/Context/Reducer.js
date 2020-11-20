@@ -1,5 +1,6 @@
 export const initialState = {
   cart: [],
+  order: []
 };
 
 const reducer = (state = initialState, action) => {

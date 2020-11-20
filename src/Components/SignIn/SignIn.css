@@ -1,7 +1,7 @@
 .formContainer {
      position: absolute;
-     max-width: 320px;
-     width: 88%;
+     width: calc(100% - 40px);
+     max-width: 450px;
      padding: 20px;
      top: 50%;
      left: 50%;
@@ -116,12 +116,17 @@
      left: 50%;
      transform: translate(-50%, -50%);
      height: 44px;
-     max-width: 320px;
-     width: 88%;
+     width: calc(100% - 40px);
+     max-width: 450px;
      display: flex;
      justify-content: center;
      border-radius: 0.25rem;
      background-color: black;
+     cursor: pointer;
+     transition: all 0.5s;
+}
+.googleLogin:hover {
+     box-shadow: 10px 10px 30px -15px black;
 }
 .gmailSVG {
      height: 36px;

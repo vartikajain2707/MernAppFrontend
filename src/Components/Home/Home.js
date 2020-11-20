@@ -8,7 +8,7 @@ import ShopList from '../Shop/ShopList';
 const Home = () => {
      const [shops, setShops] = useState([]);
      useEffect(() => {
-          axios.get("http://localhost:5000/getShops/")
+          axios.get("https://mern-app-front.herokuapp.com/getShops/")
           .then((res) => {
                setShops(res.data);
           })

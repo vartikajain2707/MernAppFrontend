@@ -1,18 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { useStateValue } from "../../Context/StateProvider";
+import { useAuth } from "../../Context/AuthContext";
+import axios from 'axios';
 
 export default function CheckoutForm() {
-  const [{ cart }] = useStateValue();
-  let items = [];
-  for (let i = 0; i < cart.length; i++) {
-    items.push({
-      object: cart[i].name,
-      amount: cart[i].price,
-      quantity: cart[i].quantity,
-      description: cart[i].description,
-    });
-  }
+  const { currentUser } = useAuth();
+  let [{ cart, order }] = useStateValue();
   const [succeeded, setSucceeded] = useState(false);
   const [error, setError] = useState(null);
   const [processing, setProcessing] = useState("");
@@ -23,22 +17,46 @@ export default function CheckoutForm() {
   const elements = useElements();
 
   useEffect(() => {
-      window
-        .fetch("/create-payment-intent", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({items: items})
-        })
-        .then(res => {
-             console.log(JSON.stringify(items));
-          return res.json();
-        })
-        .then(data => {
-          setClientSecret(data.clientSecret);
-        });
-   }, []);
+    let items = [];
+    for (let i = 0; i < cart.length; i++) {
+      items.push({
+        id: cart[i].id,
+        object: cart[i].name,
+        amount: cart[i].price,
+        quantity: cart[i].quantity,
+        description: cart[i].description,
+      });
+    }
+    let data = {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ items: items, name: currentUser.displayName })
+    }
+    
+    axios.post("https://mern-app-front.herokuapp.com/create-payment-intent", data)
+      .then((res) => {
+        return res.json();
+      }).then((data) => {
+        setClientSecret(data.clientSecret);
+      }).catch(err => {
+        console.log(err);
+      });
+ /*    window
+      .fetch("https://mern-app-front.herokuapp.com/create-payment-intent", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ items: items, name: currentUser.displayName }),
+      }).then((res) => {
+        return res.json();
+      }).then((data) => {
+        setClientSecret(data.clientSecret);
+      }).catch(err => {
+        console.log(err);
+      }); */
+  }, []);
 
   const cardStyle = {
     style: {
@@ -70,7 +88,7 @@ export default function CheckoutForm() {
     setProcessing(true);
 
     const payload = await stripe.confirmCardPayment(clientSecret, {
-      receipt_email: email,
+      receipt_email: currentUser.email,
       payment_method: {
         card: elements.getElement(CardElement),
       },
@@ -83,6 +101,12 @@ export default function CheckoutForm() {
       setError(null);
       setProcessing(false);
       setSucceeded(true);
+      let l = cart.length;
+      for(let i = 0; i < l; i++) {
+        await order.push(cart.pop());
+      }
+      console.log(order);
+      console.log(cart);
     }
   };
 
@@ -112,19 +136,21 @@ export default function CheckoutForm() {
         </button>
         {/* Show any error that happens when processing the payment */}
         {error && (
-          <div className="card-error" role="alert">
+          <div className="card-error alert" role="alert">
             {error}
           </div>
         )}
-        {/* Show a success message upon completion */}
-        <p className={succeeded ? "result-message" : "result-message hidden"}>
-          Payment succeeded, see the result in your
-          <a href={`https://dashboard.stripe.com/test/payments`}>
-            {" "}
-            Stripe dashboard.
-          </a>{" "}
-          Refresh the page to pay again.
-        </p>
+        {succeeded ? (
+          <div className="success">
+            <p
+              className={succeeded ? "result-message" : "result-message hidden"}
+            >
+              Payment succeeded ✔
+            </p>
+          </div>
+        ) : (
+          <></>
+        )}
       </form>
     </div>
   );

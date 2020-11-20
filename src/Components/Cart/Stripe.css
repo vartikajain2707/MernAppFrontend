@@ -10,6 +10,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
+  background: var(--secColor);
   align-self: center;
   border-radius: 5px;
   padding: 10px;
@@ -171,4 +172,13 @@
   form {
     width: 80vw;
   }
+}
+.success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  position: relative;
+  padding: .15rem .75rem;
+  border-radius: .25rem;
+  margin: 5px auto;
 }
